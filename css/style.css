@@ -1,0 +1,945 @@
+/*             --              Gestion des écrans               --             */
+/* Parametres par défaut ( DESKTOP ) */
+html {
+    --main-color: #0065FC;
+    --second-color: #f2f2f2;
+    overflow-x: hidden;
+}
+
+body>:not(footer) {
+    font-family: 'Raleway', 'Arial', sans-serif;
+    font-size: 14px;
+    color: black;
+    padding: 0px 30px 0px 30px;
+    word-wrap: break-word;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo {
+    width: 100px;
+    height: 50px;
+}
+
+.menus {
+    list-style-type: none;
+    margin-top: 0px;
+    display: flex;
+}
+
+.menus li {
+    display: flex;
+}
+
+.menus a {
+    font-family: 'Raleway';
+    text-decoration: none;
+    padding: 30px 20px 0px 20px;
+    color: grey;
+}
+
+.menus a:hover {
+    border-top: 3px var(--main-color) solid;
+    color: var(--main-color);
+    padding-top: 27px;
+    display: flex;
+}
+
+
+/**     Partie Recherche    /   Filtres     **/
+
+.parametres h1 {
+    font-size: 18px;
+    color: black;
+}
+
+.parametres h1+p {
+    font-family: 'Raleway';
+    color: grey;
+}
+
+.parametres form {
+    display: flex;
+}
+
+.parametres i {
+    background-color: var(--second-color);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 14px 13px 13px 13px;
+}
+
+.parametres .fa-info {
+    background-color: transparent;
+}
+
+#ville {
+    padding: 10px 10px 10px 10px;
+    height: 19px;
+    width: 150px;
+    color: black;
+    border: 1px var(--second-color) solid;
+    font-weight: bold;
+}
+
+#rechercher {
+    background-color: var(--main-color);
+    height: 42px;
+    width: 110px;
+    color: white;
+    border: 1px var(--second-color) solid;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: bold;
+    display: inline;
+}
+
+#rechercher:hover {
+    cursor: pointer;
+}
+
+.parametres form p:last-child {
+    display: none;
+}
+
+.parametres div {
+    display: flex;
+}
+
+.parametres div h1 {
+    margin-top: 35px;
+}
+
+.filtres {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.filtres i {
+    background-color: #DEEBFF;
+    border-radius: 50px;
+    margin: auto;
+    z-index: 1;
+    color: var(--main-color);
+}
+
+.filtres li:nth-of-type(2) i {
+    width: 14px;
+}
+
+.filtres a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+.filtres li {
+    display: flex;
+    margin-right: 20px;
+}
+
+.filtres p {
+    border: 1px rgb(196, 192, 192) solid;
+    padding: 11px 20px 11px 45px;
+    border-radius: 25px;
+    margin-left: -40px;
+    font-weight: bold;
+}
+
+.filtres p:hover {
+    background-color: #DEEBFF;
+    color: var(--main-color);
+}
+
+.parametres div:last-child i {
+    border: 1px rgb(196, 192, 192) solid;
+    color: var(--main-color);
+    border-radius: 25px;
+    padding: 6px 2px 4px 10px;
+    width: 15px;
+    height: 15px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 40px;
+}
+
+
+.parametres div>p {
+    font-family: 'Raleway';
+    color: grey;
+}
+
+/**     Partie Section Hebergements  :   Affichage des Hebergements  **/
+#resultat {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+main {
+    display: block;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+main #hebergements {
+    width: 67%;
+    background-color: var(--second-color);
+    border-radius: 20px;
+    margin: 0;
+    padding-top: 20px;
+    height: 100%;
+}
+
+main #hebergements>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+main strong {
+    font-family: 'Raleway';
+    color: black;
+}
+
+main #hebergements a {
+    text-decoration: none;
+    color: black;
+    width : 28%;
+}
+
+main #hebergements a>h3 {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+
+}
+
+main #hebergements h2{
+    margin-left: 30px;
+}
+
+main h2:first-of-type {
+    font-size: 17px;
+    padding-bottom: 10px;
+}
+
+main #hebergements article {
+    border: 3px white solid;
+    box-shadow: 2px 2px 3px grey;
+    background-color: white;
+    border-radius: 20px;
+    display: inline-block;
+    margin-right: 3%;
+    margin-bottom: 10%;
+    width : 100%;
+}
+
+
+main #hebergements article div {
+    display: block;
+    margin: 0px 0px 0px 10px;
+}
+
+.card {
+    width: 100%;
+    height: 100px;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+}
+
+main #hebergements article div p:nth-child(2) {
+    font-family: 'Raleway';
+    font-size: 12px;
+    color: grey;
+    margin-top: -10px;
+}
+
+.fa-star {
+    color: var(--second-color);
+}
+
+.checked {
+    color: var(--main-color);
+}
+
+/**     Partie Aside    :   LES PLUS POPULAIRES     **/
+
+aside {
+    background-color: var(--second-color);
+    width: 26%;
+    border-radius: 20px;
+    padding: 10px 0px 10px 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+aside div:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+aside h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+aside div:first-child i {
+    width: 30px;
+    height: 30px;
+}
+
+aside a {
+    text-decoration: none;
+    color: black;
+}
+
+aside article {
+    border: 3px white solid;
+    box-shadow: 2px 2px 3px grey;
+    width: 90%;
+    height: 115px;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 11%;
+    padding: 1px 0px 11px 1px;
+    word-wrap: break-word;
+    display: flex;
+}
+
+aside article div:not(.star) {
+    flex-direction: column;
+    margin-left: 10px;
+    margin-top: -10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+aside article div p:nth-child(2) {
+    font-family: 'Raleway';
+    font-size: 12px;
+    color: grey;
+    margin-top: -10px;
+}
+
+#populaire {
+    display: flex;
+    flex-direction: column;
+}
+
+.star {
+    display: inline-block;
+}
+
+aside .fa-star {
+    padding-top: 10%;
+}
+
+.cardpop {
+    width: 100px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 20px 0px 0px 20px;
+}
+
+/**     Partie  Section Activités : Affichage des activités  **/
+
+main #activites :not(h2) {
+    display: flex;
+}
+
+main #activites {
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+main #activites div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main #activites a {
+    display: inline-block;
+    text-decoration: none;
+    width : 23%;
+}
+
+main #activites article {
+    box-shadow: 2px 2px 3px grey;
+    border-radius: 25px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    width :100%;
+}
+
+main #activites a:nth-of-type(2) article {
+    display: block;
+}
+
+main #activites h3 {
+    padding-left: 20px;
+}
+
+main #activites a:nth-of-type(2) article:nth-of-type(1) h3 {
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 43px;
+}
+
+main #activites a:nth-of-type(2) article:nth-of-type(2) h3 {
+    padding-left: 20px;
+    padding-bottom: 16px;
+}
+
+main #activites a:nth-of-type(4) article {
+    display: block;
+}
+
+main #activites a:nth-of-type(4) article:nth-of-type(1) h3 {
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 33px;
+}
+
+main #activites a:nth-of-type(4) article:nth-of-type(2) h3 {
+    padding-left: 20px;
+    padding-bottom: 17px;
+}
+
+
+.cardactivite1 {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.cardactivite2 {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.cardactivite3 {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.cardactivite4 {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+
+/**     FOOTER  -------------   **/
+footer {
+    font-family: 'Raleway', 'Arial', sans-serif;
+    font-size: 14px;
+    color: black;
+    padding: 20px 0px 20px 38px;
+    background-color: var(--second-color);
+}
+
+footer nav {
+    display: flex;
+}
+
+footer div {
+    width: 33%;
+}
+
+footer ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+footer li {
+    font-family: 'Raleway';
+    color: grey;
+    padding-bottom: 20px;
+}
+
+footer a {
+    color: grey;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width:1125px) and (min-width:993px){
+    main #hebergements h3{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    main #activites h3{
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+
+@media screen and (max-width:992px) and (min-width:769px) {
+
+    /* Pour les écrans entre 992px et 768 px (tablette)*/
+
+    body>:not(footer) {
+        margin: 0;
+        padding: 0px 25px 0px 30px;
+    }
+
+    .filtres li:nth-of-type(2) i {
+        width: 14px;
+    }
+
+    main h2 {
+        margin-bottom: 30px;
+    }
+
+    main section {
+        height: 100%;
+        margin-bottom: 30px;
+    }
+
+    #resultat {
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    main #hebergements {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    aside {
+        width: 50%;
+    }
+
+    aside div:first-child {
+        margin-right: 25px;
+    }
+
+    main #activites h3{
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    main #activites div {
+        justify-content: space-around;
+    }
+
+    body section:nth-of-type(2) {
+        margin-bottom: 50px;
+        width: auto;
+    }
+
+
+    body section:nth-of-type(2) a:nth-of-type(1) article {
+        margin-right: 130px;
+    }
+
+    body section:nth-of-type(2) a:nth-of-type(3) article {
+        margin-right: 130px;
+    }
+
+    footer div:not(div:nth-of-type(3)) {
+        margin-right: 130px;
+    }
+
+    body section:nth-of-type(2) article {
+        margin-bottom: 30px;
+    }
+
+    body section:nth-of-type(2) h2 {
+        margin-bottom: 50px;
+    }
+
+    footer {
+        padding: 0px 0px 0px 30px;
+        overflow: hidden;
+    }
+
+    footer nav {
+        width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width:768px) {
+
+    /* Pour les écrans de moins de 768px (tel)*/
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    body>:not(footer) {
+        margin: 0;
+        padding: 0;
+    }
+
+    .filtres {
+        flex-wrap: wrap;
+    }
+
+    main {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    main h2 {
+        margin-left: 10px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header p {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menus {
+        margin: 0;
+        padding: 0;
+    }
+
+    .menus a {
+        color: black;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+    }
+
+    .menus li {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menus>:first-child a {
+        border-bottom: var(--second-color) 3px solid;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menus>:last-child a {
+        border-bottom: var(--second-color) 3px solid;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menus a:hover {
+        border-top: 0;
+    }
+
+    .menus>:first-child a:hover {
+        border-bottom: var(--main-color) 3px solid;
+        color: var(--main-color);
+        padding-bottom: 18px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menus>:last-child a:hover {
+        border-bottom: var(--main-color) 3px solid;
+        color: var(--main-color);
+        padding-bottom: 18px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .parametres {
+        padding: 0px 0px 0px 20px;
+    }
+
+    .parametres span {
+        color: black;
+    }
+
+    .parametres form {
+        align-items: center;
+    }
+
+    .parametres div:first-of-type {
+        flex-direction: column;
+    }
+
+    #rechercher {
+        display: none;
+    }
+
+    #ville {
+        width: 70%;
+    }
+
+    .parametres .fa-search {
+        background-color: transparent;
+        padding: 3px 0px 0px 2px;
+    }
+
+    .parametres p {
+        cursor: pointer;
+    }
+
+    .parametres form p:last-child {
+        display: flex;
+        background-color: var(--main-color);
+        padding: 10px 10px 10px 10px;
+        height: 21px;
+        width: 20px;
+        color: white;
+        border-radius: 10px;
+        margin-left: -20px;
+    }
+
+    .filtres {
+        margin: 0;
+        padding: 0;
+    }
+
+    .filtres li:nth-of-type(2) i {
+        width: 14px;
+    }
+
+    #resultat {
+        display: flex;
+        flex-direction: column;
+        margin-bottom:0;
+    }
+
+    main #hebergements {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 0;
+        padding: 0;
+        margin-bottom: 50px;
+        background-color: transparent;
+        order: 2;
+    }
+
+    main #hebergements a {
+        width: 100%;
+    }
+
+    main #hebergements article {
+        display: block;
+        width : auto;
+    }
+
+    main #hebergements>div {
+        justify-content: center;
+    }
+
+    aside #populaire {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        padding: 0;
+        border-radius: 0;
+        width: 100%;
+        order: 1;
+    }
+
+    aside article {
+        display: flex;
+        width: 92%;
+    }
+
+    aside article div {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    aside div:first-child {
+        margin: 0;
+    }
+
+    .cardpop {
+        width: 150px;
+    }
+
+    aside h2 {
+        margin-left: 10px;
+    }
+
+    aside div:first-child {
+        justify-content: space-between;
+    }
+
+    main section {
+        background-color: transparent;
+        height: 100%;
+        width: 60%;
+    }
+
+    .card {
+        width: 100%;
+        height: 120px;
+    }
+
+    main section article {
+        width: 90%;
+        height: 190px;
+        margin-left: 10px;
+    }
+
+    main section article div {
+        display: inline-block;
+        margin: 0px 0px 0px 10px;
+    }
+
+    main section article div h3 {
+        margin-top: 2px;
+        margin-bottom: 11px;
+    }
+
+    main #activites {
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    main #activites div{
+        width : 93%;
+    }
+
+    main #activites>div {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    main #activites h3 {
+        margin-bottom: 20px;
+    }
+
+    main #activites article {
+        margin-bottom: 20px;
+        padding: 0;
+        height: 180px;
+    }
+
+    main #activites a:nth-of-type(2) article:nth-of-type(1) h3 {
+        margin-bottom: 20px;
+    }
+
+    main #activites a:nth-of-type(4) article:nth-of-type(1) h3 {
+        margin-bottom: 20px;
+    }
+
+    main #activites a {
+        width: 100%;
+    }
+
+    main #activites article a {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    main #activites article:nth-of-type(2) {
+        margin-bottom: 20px;
+    }
+
+    main #activites article:nth-of-type(2) h3 {
+        padding-bottom: 0;
+    }
+
+    main #activites article:nth-of-type(2) a {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    main #activites article:nth-of-type(4) a {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    main #activites article:nth-of-type(4) h3 {
+        padding-bottom: 0;
+    }
+
+    main #activites a:not(a:nth-of-type(4)) {
+        margin-right: 0px;
+    }
+
+
+    [class^=cardactivite] {
+        width: 100%;
+        height: 120px;
+    }
+
+
+    footer {
+        padding: 20px 0px 20px 38px;
+        margin: 0;
+    }
+
+    footer a {
+        color: black;
+    }
+
+    footer nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer div:not(div:nth-of-type(3)) {
+        margin-right: 30px;
+    }
+
+    footer div {
+        margin-right: 0px;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    footer li {
+        font-family: 'Raleway';
+        padding-bottom: 15px;
+    }
+
+}
